@@ -19,6 +19,6 @@ if __name__ == '__main__':
                                      action,
                                      last_mention_service,
                                      is_production,
-                                     int(os.environ.get('SCREENSHOT_TIMEOUT', 30)),
+                                     int(os.environ.get('MENTION_PROCESS_TIMEOUT', 30)),
                                      int(os.environ.get('RETRY_COUNT', 3)))
     mention_handler.run()
