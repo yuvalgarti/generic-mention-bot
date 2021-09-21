@@ -1,5 +1,5 @@
 class MentionAction:
-    async def run(self, mention):
+    def run(self, mention):
         """
         Gets a mention (Tweepy Status object) and process it.
         :param mention:

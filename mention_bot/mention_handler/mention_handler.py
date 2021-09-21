@@ -1,4 +1,3 @@
-import asyncio
 import logging
 import os
 import time
@@ -30,11 +29,8 @@ class MentionHandler:
     def handle_mention_with_retries(self, mention, retries_count=3):
         for i in range(retries_count):
             try:
-                asyncio.get_event_loop().run_until_complete(
-                    asyncio.wait_for(self.mention_action.run(mention), self.timeout))
+                self.mention_action.run(mention)
                 break
-            except asyncio.exceptions.TimeoutError:
-                self.logger.warning('Timeout occurred! mention id: ' + str(mention.id))
             except tweepy.TweepError as tweepy_exp:
                 raise tweepy_exp
             except Exception as exp:
