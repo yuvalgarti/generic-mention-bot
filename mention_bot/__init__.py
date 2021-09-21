@@ -1,3 +1,1 @@
-from mention_action.mention_action import MentionAction
-from mention_handler.mention_handler import MentionHandler
-from mention_handler.services.last_mention_service import LastMentionService
+from mention_bot.last_mention_service import LastMentionService
