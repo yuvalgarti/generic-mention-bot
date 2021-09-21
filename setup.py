@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'mention_bot',
   packages = ['mention_bot'],
-  version = '1.0',
+  version = '1.1',
   license='MIT',
   description = 'A generic infrastructure to create a Twitter bot that acts on mentions of it',
   author = 'Yuval Garti',
