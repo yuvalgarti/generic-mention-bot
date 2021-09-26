@@ -73,5 +73,9 @@ class MentionHandler:
                 time.sleep(15)
             except tweepy.TweepError as exp:
                 self.logger.warning('Unexpected Tweepy error occurred. error: {}'.format(str(exp)))
+                if self.is_production_mode:
+                    self.last_mention_service.set_last_mention(str(int(self.last_mention_service.get_last_mention()) + 1))
             except Exception as unknown_exp:
                 self.logger.exception('ERROR! {}'.format(str(unknown_exp)))
+                if self.is_production_mode:
+                    self.last_mention_service.set_last_mention(str(int(self.last_mention_service.get_last_mention()) + 1))
