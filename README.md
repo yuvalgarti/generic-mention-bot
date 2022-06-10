@@ -7,7 +7,7 @@ In order to create your own bot, you need to:
 2. Extend the next classes and implement the functions they declare:
    1. `LastMentionService` - to store and get the last mention the bot has processed (for persistence)
    2. `MentionAction` - The actual action that needs to be done with each mention
-3. Changed `main.py` to match your needs
+3. Change `main.py` to match your needs
 
 # Environment Variables Used
 * **TWITTER_CONSUMER_KEY**
